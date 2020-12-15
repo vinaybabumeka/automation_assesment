@@ -36,7 +36,7 @@ sudo mv /tmp/eksctl /usr/local/bin
 
 
 ## AWS cli configuration:
-run below command to configure aws cli, it will ask to enter aws access key and secret key, default region and output format:
+Run below command to configure aws cli, it will ask to enter aws access key and secret key, default region and output format:
 
 
 aws configure
@@ -45,21 +45,28 @@ aws configure
 ## Terraform configuration:
 
 
-first edit the main.tf file on terraform/eks-single-ng/main.tf file, to customize the network setup with your requirements.
-modify the profile and cluster-name  values.
+First edit the main.tf file on terraform/eks-single-ng/main.tf file, to customize the network setup with your requirements.
+Modify the profile and cluster-name  values.
 
 ## Then run below commands one by one:
 
 
 terraform init
+
+
 terraform plan
+
+
 terraform apply
+
 
 ###### Once all the resources are created note the public and private subnet ids and availablity zone.
 
 ## eksclt configuration:
 
 
-modify the eluster-eks.yml file with keyname, subnet id and cluster name.
-after modifying the file run below command to create cluster:
+Modify the eluster-eks.yml file with keyname, subnet id and cluster name.
+After modifying the file run below command to create cluster:
+
+
 eksctl create cluster --profile default -f eluster-eks.yml
