@@ -37,6 +37,8 @@ sudo mv /tmp/eksctl /usr/local/bin
 
 ## AWS cli configuration:
 run below command to configure aws cli, it will ask to enter aws access key and secret key, default region and output format:
+
+
 aws configure
 
 
